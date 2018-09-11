@@ -35,4 +35,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-gameProject/Assets/Logs/log*
+#Personl
+
+gameProject/Assets/Logs/*
