@@ -1,0 +1,6 @@
+Hour:Min:Second : [Log Type] Log Message
+The file name is the date of the log, example:
+log-2018-1-1.txt
+
+Use the function LogWriter.log_message(string logType, string logMessage) to write to the log
+*public static void log_message(string logType, string logMessage)
