@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class testRun : MonoBehaviour {
+public class tests : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Debug.Log(Constants.TEST_TEXT);
+        LogWriter.log_message(Constants.DEBUG, "Testing Testing 123 Mip");
 	}
 	
 	// Update is called once per frame
