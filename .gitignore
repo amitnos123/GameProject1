@@ -35,4 +35,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-gameProject/Assets/Logs/*
+gameProject/Assets/Logs/log*
