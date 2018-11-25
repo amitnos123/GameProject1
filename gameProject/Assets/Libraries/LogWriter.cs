@@ -14,7 +14,7 @@ public static class LogWriter
     static bool SuccessEnabled = true;
     static bool ErrorEnabled = true;
 
-    public static void log_message(string logType, string logMessage)
+    public static void LogMessage(string logType, string logMessage)
     {
         DateTime current = DateTime.Now;
         string filePath = Constants.LOGS_PATH + "log-"+ current.ToString("yyyy-dd-MM") + "." + Constants.LOGS_FILENAME_EXTENSION;
@@ -33,6 +33,14 @@ public static class LogWriter
         //}
     }
 
+    public static void Enter(string logMessage)
+    {
+        if (DebugEnabled)
+        {
+            LogMessage(Constants.DEBUG, logMessage);
+        }
+    }
+
     public static void Enter(string functionName, params object[] list)
     {
         if (EnterEnabled)
@@ -43,7 +51,7 @@ public static class LogWriter
                 parStr = " With Params" + ParamsObjectsToString(list);
             }
 
-            log_message(Constants.ENTER, "Endtering " + functionName + parStr);
+            LogMessage(Constants.ENTER, "Endtering " + functionName + parStr);
         }
     }
 
@@ -57,7 +65,7 @@ public static class LogWriter
                 parStr = " With Params" + ParamsObjectsToString(list);
             }
 
-            log_message(Constants.EXIST, "Existing " + functionName + parStr);
+            LogMessage(Constants.EXIST, "Existing " + functionName + parStr);
         }
     }
 
@@ -71,7 +79,7 @@ public static class LogWriter
                 parStr = " With Params" + ParamsObjectsToString(list);
             }
 
-            log_message(Constants.START, "Starting ");
+            LogMessage(Constants.START, "Starting ");
         }
     }
 
@@ -85,7 +93,7 @@ public static class LogWriter
                 parStr = " With Params" + ParamsObjectsToString(list);
             }
 
-            log_message(Constants.END, "Ending " + functionName + parStr);
+            LogMessage(Constants.END, "Ending " + functionName + parStr);
         }
     }
 
@@ -93,7 +101,7 @@ public static class LogWriter
     {
         if (SuccessEnabled)
         {
-            log_message(Constants.SUCCESS, logMessage);
+            LogMessage(Constants.SUCCESS, logMessage);
         }
     }
 
@@ -101,7 +109,7 @@ public static class LogWriter
     {
         if (ErrorEnabled)
         {
-            log_message(Constants.ERROR, logMessage);
+            LogMessage(Constants.ERROR, logMessage);
         }
     }
 

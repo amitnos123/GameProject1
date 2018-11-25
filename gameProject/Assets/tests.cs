@@ -5,9 +5,12 @@ using System.Reflection;
 
 public class tests : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-        LogWriter.log_message(Constants.DEBUG, "Testing Testing 123 Mip");
+    public int publicIntTest;
+    public float publicFloatTest = Constants.GRAVITY_MULTIPLIER;
+
+    // Use this for initialization
+    void Start () {
+        LogWriter.LogMessage(Constants.DEBUG, "Testing Testing 123 Mip");
         SaveControler saveData = new SaveControler(10);
         string fileName = "saveTest1";
         SaveControler.save_json(fileName, saveData);
@@ -22,6 +25,6 @@ public class tests : MonoBehaviour {
 
     private void mipTestLogName(string mip, int a)
     {
-        LogWriter.log_message(Constants.DEBUG, "Starting " + MethodBase.GetCurrentMethod().Name);
+        LogWriter.Start(MethodBase.GetCurrentMethod().Name);
     }
 }

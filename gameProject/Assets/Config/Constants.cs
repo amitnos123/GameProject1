@@ -7,7 +7,7 @@ public static class Constants {
     public const string LOGS_PATH = "Assets\\Logs\\";
     public const string SAVES_PATH = "Assets\\Saves\\";
 
-    /**/
+    /*FILENAME EXTENSIONS*/
     public const string LOGS_FILENAME_EXTENSION = "txt";
     public const string SAVES_FILENAME_EXTENSION = "txt";
 
@@ -20,4 +20,7 @@ public static class Constants {
     public const string EXIST = "Exist";
     public const string START = "Start";
     public const string END = "End";
+
+    /*PHYSICS*/
+    public const float GRAVITY_MULTIPLIER = 9.8f;
 }
