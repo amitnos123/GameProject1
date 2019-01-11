@@ -33,7 +33,7 @@ public static class LogWriter
         //}
     }
 
-    public static void Enter(string logMessage)
+    public static void Debug(string logMessage)
     {
         if (DebugEnabled)
         {

@@ -88,7 +88,6 @@ public class SaveControler {
 
     protected static bool Validation(SaveControler saveData)
     {
-
         return true;
     }
 }
