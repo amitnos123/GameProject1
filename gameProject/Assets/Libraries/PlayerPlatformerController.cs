@@ -29,7 +29,7 @@ public class PlayerPlatformerController : PhysicsObject
                 velocity.y = velocity.y * 0.5f;
             }
         }*/
-
+        
         targetVelocity = move * maxSpeed;
     }
 }
