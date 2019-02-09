@@ -6,9 +6,10 @@ public class PlayerPlatformerController : PhysicsObject
 {
 
     public float maxSpeed = 7;
+    public GameObject window;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 
@@ -31,5 +32,9 @@ public class PlayerPlatformerController : PhysicsObject
         }*/
         
         targetVelocity = move * maxSpeed;
+    }
+
+    private void OpenWindow() {
+
     }
 }
